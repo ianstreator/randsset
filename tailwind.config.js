@@ -7,6 +7,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        "primaryColor": "hsl(0, 0%, 80%)",
+        "secondaryColor": "hsl(215, 100%, 75%)",
+        "hoverColor": "hsl(215, 100%, 70%)",
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
