@@ -1,5 +1,5 @@
-import { NextResponse, NextRequest } from "next/server";
-import { Sizes, Photo } from "@/types";
+import { NextResponse } from "next/server";
+import { Photos, Sizes } from "@/types";
 
 const BASE_API_URL = "https://api.unsplash.com/";
 const UNSPLASH_ACCESS_KEY = process.env.UNSPLASH_ACCESS_KEY;
@@ -19,12 +19,12 @@ export async function POST(request: Request) {
 
   console.log(results);
 
-  const cleanedResults = results.map(({ id, urls: { thumb, full } }) => {
+  const photos: Photos = results.map(({ id: uid, urls: { thumb, full } }) => {
     // const uid = thumb.split("?")[0].split("-")[1];
-    return { [id]: { thumb, full } };
+    return { uid, thumb, full };
     // urlsObject[id] = { thumb, full };
   });
-  console.log(cleanedResults);
+  console.log(photos);
 
-  return NextResponse.json(cleanedResults);
+  return NextResponse.json(photos);
 }
