@@ -17,12 +17,16 @@ export type Quote = {
 
 export type Sizes = {
   thumb: string;
+  small: string;
+  regular: string;
   full: string;
 };
 
 export type Photo = {
   uid: string;
   thumb: string;
+  small: string;
+  regular: string;
   full: string;
 };
 
