@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --primaryColor: hsl(0, 0%, 80%);
+  --primaryColor: #064E3B;
   --secondaryColor: hsl(215, 100%, 75%);
-  --fontColor: hsl(0, 0%, 15%);
+  --fontColor: hsl(0, 0%, 100%);
 }
 
 .hide-scrollbar::-webkit-scrollbar {
@@ -16,6 +16,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  transition: 200ms;
 }
 
 body {
